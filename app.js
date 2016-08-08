@@ -6,9 +6,12 @@ $(document).ready(function() {
             dataType: "text",
             success : function (data) {
                 $(".algorithm").html(data);
-                var $runButton = $('<button class="btn btn-success">Run</button>')
-                $runButton.appendTo($(".algorithm"));
+                var $runButton = $('<button class="btn btn-success runButton">Run</button>')
+                $runButton.appendTo($(".subAlg"));
             }
         });
     });
+    $(".runButton").click(function(){
+        
+    })
 });
