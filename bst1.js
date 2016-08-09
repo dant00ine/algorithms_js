@@ -2,26 +2,27 @@
 
 "use strict";
 
-function node(data){
+function NODE(data){
     this.data = data;
     this.left = null;
     this.right = null;
     // this.show = show;
+    this.count = 1;
 }
 
-function bst(){
+function BST(){
     this.root = null;
 }
 
-bst.prototype.add = function add(data){
-    let n = new node(data);
+BST.prototype.add = function add(data){
+    let n = new NODE(data);
     if(this.root == null){
         return this.root = n;
     }
     let current = this.root;
     // let parent = this.root;
     // determine proper location within tree
-    // find the proper node and make connection
+    // find the proper NODE and make connection
     while(current){
         if(data <= current.data){
             if(current.left == null){
@@ -36,37 +37,61 @@ bst.prototype.add = function add(data){
             current = current.right;
         }
     }
-}
+};
 
-node.prototype.show = function show(){
+BST.prototype.update = function update(data){
+    let grade = this.find(data);
+    grade.count++;
+    return grade;
+};
+
+NODE.prototype.show = function show(){
     return this.data;
-}
+};
 
-bst.prototype.inOrder = function inOrder(node){
-    if(node !== null){
-        inOrder(node.left);
-        console.log(node.show());
-        inOrder(node.right);
+BST.prototype.prArray = function prArray(arr){
+    console.log(arr[0].toString() + ' ');
+    for( var i = 1; i < arr.length; i++) {
+        console.log(arr[i].toString() + ' ');
+        if(i % 10 == 0){
+            console.log(" ");
+        }
     }
-}
+};
 
-bst.prototype.postOrder = function postOrder(node){
-    if(node !== null){
-        postOrder(node.left);
-        postOrder(node.right);
-        console.log(node.show());
+BST.prototype.genArray = function genArray(length) {
+    var arr = [];
+    for (var i = 0; i < length; i++){
+        arr[i] = Math.floor(Math.random() * 101);
     }
-}
+    return arr;
+};
 
-bst.prototype.preOrder = function preOrder(node){
-    if(node !== null){
-        console.log(node.show());
-        preOrder(node.left);
-        preOrder(node.right);
+BST.prototype.inOrder = function inOrder(NODE){
+    if(NODE !== null){
+        inOrder(NODE.left);
+        console.log(NODE.show());
+        inOrder(NODE.right);
     }
-}
+};
 
-bst.prototype.contains = function contains(data){
+BST.prototype.postOrder = function postOrder(NODE){
+    if(NODE !== null){
+        postOrder(NODE.left);
+        postOrder(NODE.right);
+        console.log(NODE.show());
+    }
+};
+
+BST.prototype.preOrder = function preOrder(NODE){
+    if(NODE !== null){
+        console.log(NODE.show());
+        preOrder(NODE.left);
+        preOrder(NODE.right);
+    }
+};
+
+BST.prototype.contains = function contains(data){
     let current = this.root;
     console.log("data: " + data);
     // console.log("current: " + this.root.data)
@@ -87,13 +112,67 @@ bst.prototype.contains = function contains(data){
 
     return console.log("BST does not contain value");
 
-}
-//
-bst.prototype.remove = function remove(data){
-    this.root && this.root.remove(data);
-}
+};
 
-node.prototype.remove = function remove(data){
+BST.prototype.find = function find(data){
+  let current = this.root;
+    while(current.data != data){
+        if(data < current.data){
+            current = current.left;
+        } else {
+            current = current.right;
+        }
+        if (current == null) {
+            return null;
+        }
+    }
+    return current;
+};
+
+BST.prototype.remove = function remove(data){
+    this.root && this.root.remove(data);
+};
+
+// BST.prototype.remove = function remove(data){
+//     this.root = this.removeNode(this.root, data);
+// };
+
+// BST.prototype.removeNode = function removeNode(node, data){
+//     if(node == null){
+//         return null;
+//     }
+//     if(data == node.data){
+//         // node has no children
+//         if(node.left == null && node.right == null){
+//             return null;
+//         }
+//         // node has no left child
+//         if(node.left == null){
+//             return node.right;
+//         }
+//         // node has no right child
+//         if(node.right == null){
+//             return node.left;
+//         }
+//         // node has two children
+//         var tempNode = this.right.findMinValue();
+//         console.log('did tempNode work properly?' + tempNode);
+//         node.data = tempNode.data;
+//         node.right = removeNode(node.right, tempNode.data);
+//         return node;
+//     }
+//     else if (data < node.data) {
+//         node.left = removeNode(node.left, data);
+//         return node;
+//     }
+//     else {
+//         node.right = removeNode(node.right, data);
+//         return node;
+//     }
+// };
+
+NODE.prototype.remove = function remove(data){
+
     if( data < this.data ){
         this.left = this.left && this.left.remove(data);
     } else if( data > this.data ){
@@ -105,11 +184,11 @@ node.prototype.remove = function remove(data){
         return this.right || this.left;
     }
     return this;
-}
+};
 
-node.prototype.findMinValue = function findMinValue(){
+NODE.prototype.findMinValue = function findMinValue(){
     return this.left ? this.left.findMinValue() : this.data;
-}
+};
 //
 // function size(){
 //
@@ -123,6 +202,6 @@ node.prototype.findMinValue = function findMinValue(){
 //
 // }
 module.exports = {
-    bst: bst,
-    node: node
-}
+    BST: BST,
+    NODE: NODE
+};
