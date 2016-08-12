@@ -10,6 +10,8 @@ let list1 = new SList();
 
 list1.add(6);
 list1.add(7);
+list1.add(1);
+list1.add(2);
 list1.addFirst(3);
 list1.contains(7);
 list1.show();
