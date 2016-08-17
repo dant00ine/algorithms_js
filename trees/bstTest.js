@@ -4,7 +4,7 @@
 
 'use strict';
 
-const bstFile = require('./bst.js');
+const bstFile = require('./bstDepthBalancing.js');
 
 const BST = bstFile.BST;
 const NODE = bstFile.NODE;
@@ -23,6 +23,8 @@ bst1.add(-1);
 bst1.add(4);
 
 console.log("and the size is... " + bst1.size());
+
+console.log(bst1.height());
 
 
 

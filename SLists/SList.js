@@ -1,10 +1,10 @@
 
 'use strict';
 
-module.exports = {
-    NODE: NODE,
-    SList: SList
-};
+// module.exports = {
+//     NODE: NODE,
+//     SList: SList
+// };
 
 function NODE(data){
     this.data = data;
@@ -57,6 +57,27 @@ SList.prototype.add = function add(data){
         current = current.next;
     }
     current.next = n;
+};
+
+SList.prototype.popBack = function popBack(){
+
+    if(!this.head){ return null; }
+    var returnVal;
+
+    if(!this.head.next){
+        returnVal = this.head.data;
+        this.head = null;
+        return returnVal;
+    }
+
+    var runner = this.head;
+
+    while(runner.next.next)
+    { runner = runner.next; }
+
+    returnVal = runner.next.data;
+    runner.next = null;
+    return returnVal;
 };
 
 SList.prototype.contains = function contains(data){
