@@ -1,6 +1,14 @@
 /**
  * Created by danimagus on 8/16/16.
  */
+// ATL algorithms adaoted from Raoul Harel's node-avl-tree
+// repository
+/*
+ @author Raoul Harel
+ @license The MIT license (../LICENSE.txt)
+ @copyright 2015 Raoul Harel
+ @url rharel/node-avl-tree on GitHub
+ */
 // ***************************
 // **** node constructor  ****
 // ***************************
@@ -33,6 +41,10 @@ AVLNode.prototype.avl_balance_factor = function(node){
     return balanceFactor;
 };
 
+AVLNode.prototype.findMinValue = function(){
+    return this.left ? this.left.findMinValue() : this;
+};
+
 // Left Left Rotate
 
 AVLNode.prototype.avl_rotate_leftleft = function(node){
@@ -54,7 +66,6 @@ AVLNode.prototype.avl_rotate_rightright = function(node){
     b.left = a;
 
     return b;
-
 };
 
 AVLNode.prototype.avl_rotate_leftright = function(node){
@@ -101,16 +112,18 @@ AVLNode.prototype.avl_balance_node = function(node){
     if(bf >= 2){
         // right heavy
         if(this.avl_balance_factor(node.right) <= -1){
+            // leans to the left
             newroot = this.avl_rotate_rightleft(node);
         } else {
-            newroot = this.avl_rotate_leftleft(node);
+            newroot = this.avl_rotate_rightright(node);
         }
     } else if (bf <= -2){
         // left heavy
         if(this.avl_balance_factor(node.left) >= 1 ){
+            // leans to the right
             newroot = this.avl_rotate_leftright(node);
         } else {
-            newroot = this.avl_rotate_rightright(node)
+            newroot = this.avl_rotate_leftleft(node);
         }
     } else {
         // node is balanced
@@ -125,7 +138,7 @@ AVLNode.prototype.dfs_traverse_node = function(node, depth){
     if(node.left) node.dfs_traverse_node(node.left, depth + 2);
 
     for(var i = 0; i < depth; i++){
-        console.log("Node data:", node.data, node.avl_balance_factor(node));
+        console.log("Depth: " +depth +"Node data:", node.data, "Node balance: " + node.avl_balance_factor(node));
     }
 
     if(node.right) node.dfs_traverse_node(node.right, depth + 2);
@@ -143,6 +156,22 @@ function AVLTree(){
 // **********************************
 // **** tree prototype functions ****
 // **********************************
+
+AVLTree.prototype.isBalanced = function(node){
+    var balance = node.avl_balance_factor(node);
+    if(balance >= 2 || balance <= -2){
+        console.log("Node " + node.data + "is imbalanced, factor: " + balance);
+        return false;
+    } else {
+        if(node.left){
+            this.isBalanced(node.left);
+        }
+        if(node.right){
+            this.isBalanced(node.right);
+        }
+    }
+};
+
 AVLTree.prototype.insert = function(data){
     var n = new AVLNode(data);
     if(this.root == null){
@@ -165,21 +194,53 @@ AVLTree.prototype.insert = function(data){
         }
     }
 
-    if(data < previous.value) previous.left = n;
-    if(data > previous.value) previous.right = n;
+    if(data < previous.data) previous.left = n;
+    if(data > previous.data) previous.right = n;
 
     this.avl_balance();
 
 };
 
-AVLTree.prototype.remove = function remove(data){
+AVLTree.prototype.remove = function remove(node, data){
+    if(node == null){
+        return null;
+    }
+    if(data == node.data){
+        // node has no children, return null (deleting node)
+        if(node.left == null && node.right == null){
+            return null;
+        }
+        // has left child only
+        if(node.right == null){
+            return node.left;
+        }
+
+        // has right child only
+        if(node.left == null){
+            return node.right;
+        }
+
+        // has both children
+        var tempNode = node.right.findMinValue();
+        node.data = tempNode.data;
+        node.right = removeNode(node.right, tempNode.data);
+        return node;
+
+    }
+    else if(data < node.data) {
+        node.left = this.remove(node.left, data);
+        return node;
+    }
+    else{
+        node.right = this.remove(node.right, data);
+        return node;
+    }
 
 };
 
 AVLTree.prototype.avl_balance = function avl_balance(){
-    var newroot = null;
 
-    newroot = AVLNode.prototype.avl_balance_node(this.root);
+    var newroot = AVLNode.prototype.avl_balance_node(this.root);
 
     if(newroot !== this.root){
         this.root = newroot;
@@ -187,7 +248,7 @@ AVLTree.prototype.avl_balance = function avl_balance(){
 };
 
 AVLTree.prototype.height = function height(){
-
+    // displays the height of the tree
     return this.displayHeight(this.root)
 };
 
@@ -225,17 +286,22 @@ AVLTree.prototype.dfs_traverse_tree = function(){
     this.root.dfs_traverse_node(this.root, 0)
 };
 
+AVLTree.prototype.postOrder = function postOrder(node){
+    if(node !== null){
+        postOrder(node.left);
+        postOrder(node.right);
+        console.log(node.show());
+    }
+};
+
 // TEST ZONE
 
-var tree = new AVLTree();
-
-for(var i = 0; i < 20; i++){
-    let randomValue = Math.floor(Math.random()*100);
-    console.log("random value: " + randomValue);
-    tree.insert(randomValue);
-}
-
-console.log("Tree: "+tree);
-
-tree.dfs_traverse_tree();
+// var tree = new AVLTree();
+//
+// for(var i = 0; i < 20; i++){
+//     let randomValue = Math.floor(Math.random()*100);
+//     tree.insert(randomValue);
+// }
+//
+// tree.dfs_traverse_tree();
 
