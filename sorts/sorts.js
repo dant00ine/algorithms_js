@@ -17,26 +17,36 @@ function bubbleSort(arr){
 // bubbleSort([7,5,2,4,3,9]);
 // bubbleSort([9,7,5,4,3,1]);
 
+function swap(arr, idx1, idx2){
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
 
+    return arr;
+}
+
+// BROKEN
 function selectionSort(arr){
-    var minIdx = 0,
-        temp;
-    for(let i=0; i<arr.length; i++){
-        for(let i=0; i<arr.length; i++){
-            if(arr[i] < arr[minIdx]){
-                minIdx = i;
+
+    for(var j = 0; j<arr.length; j++){
+
+        var iMin = j;
+
+        for(var i = j+1; i<arr.length; i++){
+            if(arr[i] < arr[iMin]){
+                iMin = i;
             }
         }
-        temp = arr[i];
-        arr[i] = arr[minIdx];
-        arr[minIdx] = temp;
+        if(iMin != j){
+            swap(arr, j, iMin);
+        }
+
     }
-    console.log(arr);
     return arr
 }
 
-selectionSort([7,5,2,4,3,9]);
-selectionSort([9,7,5,4,3,1]);
+console.log(selectionSort([7,5,2,4,3,9]));
+console.log(selectionSort([9,7,5,4,3,1]));
 
 
 function insertionSort(arr){
@@ -62,10 +72,12 @@ function insertionSort(arr){
 function merge(left, right){
     var result = [];
 
-    console.log('******* MERGE CALL *******');
-
-    console.log("left.length: "+left.length);
-    console.log("right.length: "+right.length);
+    // console.log('******* MERGE CALL *******');
+    //
+    // console.log("left.length: "+left.length);
+    // console.log("left: "+left);
+    // console.log("right.length: "+right.length);
+    // console.log("right: "+right);
 
     while(left.length && right.length){
         if(left[0] <= right[0]){
@@ -101,3 +113,24 @@ function mergeSort(arr){
 let mergeResult = mergeSort([7,5,2,4,3,9]);
 console.log("merge result: "+ mergeResult);
 // console.log("merge sort: " + mergeSort([9,7,5,4,3,1]));
+
+
+function multiKeySort(arr){
+
+    for(var i = 0; i < arr.length; i++){
+
+    }
+
+}
+
+keyArr = [
+    {firstName: "Daniel", lastName: "Thompson"},
+    {firstName: "Pablo", lastName: "Neruda"},
+    {firstName: "John", lastName: "Keats"},
+    {firstName: "Pablo", lastName: "Escobar"},
+    {firstName: "Pablo", lastName: "Picasso"},
+    {firstName: "Michael", lastName: "Keats"},
+    {firstName: "Rick", lastName: "Thompson"},
+];
+
+let keySortResult = multiKeySort(keyArr);

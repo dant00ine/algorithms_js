@@ -105,7 +105,6 @@ BST.prototype.removeNode = function removeNode(node, data){
         }
         // node has two children
         var tempNode = node.right.findMinValue();
-        console.log('did tempNode work properly?' + tempNode.data);
         node.data = tempNode.data;
         node.right = removeNode(node.right, tempNode.data);
         return node;

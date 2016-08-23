@@ -1,8 +1,8 @@
 /**
  * Created by danimagus on 8/16/16.
  */
-// ATL algorithms adaoted from Raoul Harel's node-avl-tree
-// repository
+// many ATL algorithms adapted from Raoul
+// Harel's node-avl-tree repository
 /*
  @author Raoul Harel
  @license The MIT license (../LICENSE.txt)
