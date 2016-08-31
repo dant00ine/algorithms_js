@@ -3,8 +3,8 @@
  */
 'use strict';
 // const SListFile = require('../SLists/SList.js');
-// const SList = SListFile.SList;
-// const NODE = SListFile.NODE;
+// var SList = SListFile.SList;
+// var NODE = SListFile.NODE;
 //
 // module.exports = {
 //     NODE: NODE,
@@ -12,7 +12,7 @@
 // };
 
 SList.prototype.bubbleSort = function bubbleSort(){
-    var outerRunner = this.head;
+    var outerRunner = this.zhead;
     var innerRunner = this.head;
 
     if(this.head == null){
@@ -157,3 +157,80 @@ SList.prototype.selectionSort = function selectionSort(){
     } // end outer loop
 
 };
+
+// SList.prototype.pairSwap = function(){
+//     // implement using the previous pointer
+//     var current = this.head;
+//     var previous = this.head;
+//     var temp;
+//
+//     while(current){
+//
+//         if(current.data == this.head.data){
+//             this.head = current.next;
+//         }
+//
+//         if(current.next){
+//             temp = current.next.next;
+//             current.next.next = current;
+//         } else {
+//             temp = null;
+//         }
+//         previous = current;
+//         // iterate to next pair
+//         current = temp;
+//       }
+//     // }
+//     console.log("this" + this);
+//     this.show();
+//     return this;
+// };
+
+SList.prototype.pairSwap = function(){
+    if(this.head == null || this.head.next == null){
+      return;
+    }
+    // the edge case for the first pair is managed here
+    // without making a swap, we prepare the pointers
+    var previous = this.head;
+    var current = this.head.next;
+
+    this.head = current;
+
+    while(true){
+      var next = current.next;
+      current.next = previous;
+
+      if(next == null || next.next == null){
+        previous.next = next;
+        break;
+      }
+
+      previous.next = next.next;
+
+      previous = next;
+      current = previous.next;
+    }
+};
+
+// let list1 = new SList();
+// let list2 = new SList();
+// let list3 = new SList();
+//
+// list3.add(1);
+//
+// list2.add(5);
+// list2.add(2);
+//
+// list1.add(6);
+// list1.add(7);
+// list1.add(1);
+// list1.add(2);
+// list1.addFirst(3);
+// // list1.bubbleSort();
+// // list1.reverse();
+// console.log("list head: "+list1.head.data);
+// list1.show();
+//
+// list1.pairSwap();
+// list1.show();

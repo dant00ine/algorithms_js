@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e37e323-42b6-4c86-859e-5b9283dd626d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/trees/AVLtrees/avlAdv.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/trees/AVLtrees/avlWithHeightAttr.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/AVLtrees/AVL_Sketch_Diagram.sketch" afterPath="$PROJECT_DIR$/trees/AVLtrees/AVL_Sketch_Diagram.sketch" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SLists/SList.js" afterPath="$PROJECT_DIR$/SLists/SList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SLists/SListTest.html" afterPath="$PROJECT_DIR$/SLists/SListTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sorts/sorts.js" afterPath="$PROJECT_DIR$/sorts/sorts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/AVLtrees/avl.html" afterPath="$PROJECT_DIR$/trees/AVLtrees/avl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/AVLtrees/avl.js" afterPath="$PROJECT_DIR$/trees/AVLtrees/avl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trees/bst.js" afterPath="$PROJECT_DIR$/trees/bst.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sorts/SListSorts.js" afterPath="$PROJECT_DIR$/sorts/SListSorts.js" />
     </list>
     <ignored path="algorithms_js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +28,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5295587">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SListSorts.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SListSorts.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sorts/SListSorts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+                <state relative-caret-position="430">
+                  <caret line="209" column="22" selection-start-line="209" selection-start-column="22" selection-end-line="209" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
                   </folding>
@@ -43,11 +40,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="avlAdv.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SList.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SLists/SList.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="avlAdv.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlAdv.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="133">
-                  <caret line="183" column="62" selection-start-line="183" selection-start-column="62" selection-end-line="183" selection-end-column="62" />
+                <state relative-caret-position="2865">
+                  <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
                   <folding>
                     <element signature="n#!!doc;n#Node#0" expanded="false" />
                   </folding>
@@ -112,8 +119,8 @@
           <file leaf-file-name="bstTest.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/trees/bstTest.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -154,29 +161,31 @@
           <file leaf-file-name="avlJava" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlJava">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
+                <state relative-caret-position="1560">
                   <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SList.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/SLists/SList.js">
+          <file leaf-file-name="avl.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avl.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                <state relative-caret-position="1785">
+                  <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="avl.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avl.js">
+          <file leaf-file-name="SListTest.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SLists/SListTest.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
-                  <folding />
+                <state relative-caret-position="301">
+                  <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+                  <folding>
+                    <element signature="e#474#525#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -214,18 +223,18 @@
         <option value="$PROJECT_DIR$/SLists/listTest.js" />
         <option value="$PROJECT_DIR$/trees/bstTest.js" />
         <option value="$PROJECT_DIR$/SLists/SListTest.js" />
-        <option value="$PROJECT_DIR$/SLists/SList.js" />
-        <option value="$PROJECT_DIR$/sorts/SListSorts.js" />
         <option value="$PROJECT_DIR$/trees/bstDepthBalancing.js" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/java code for AVL" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/avl.js" />
         <option value="$PROJECT_DIR$/sorts/sorts.js" />
-        <option value="$PROJECT_DIR$/SLists/SListTest.html" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/avlWithHeightAttr.js" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/avlJava" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/avl.html" />
         <option value="$PROJECT_DIR$/trees/AVLtrees/avlAdv.js" />
         <option value="$PROJECT_DIR$/trees/bst.js" />
+        <option value="$PROJECT_DIR$/SLists/SList.js" />
+        <option value="$PROJECT_DIR$/SLists/SListTest.html" />
+        <option value="$PROJECT_DIR$/sorts/SListSorts.js" />
       </list>
     </option>
   </component>
@@ -265,7 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -375,6 +383,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -470,15 +479,17 @@
       <workItem from="1470169401527" duration="1885000" />
       <workItem from="1470675353386" duration="42249000" />
       <workItem from="1471372936002" duration="3771000" />
-      <workItem from="1471378938819" duration="37321000" />
+      <workItem from="1471378938819" duration="41034000" />
+      <workItem from="1471983359065" duration="13000" />
+      <workItem from="1471983390401" duration="2320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92749000" />
+    <option name="totallyTimeSpent" value="98795000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16597222" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -512,7 +523,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/SLists/SList.js</url>
+          <line>4</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -521,11 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1112#1160#0" expanded="false" />
-            <element signature="e#2973#3021#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,11 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1112#1160#0" expanded="false" />
-            <element signature="e#2973#3021#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,11 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1112#1160#0" expanded="false" />
-            <element signature="e#2973#3021#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -757,11 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="176" column="40" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1112#1160#0" expanded="false" />
-            <element signature="e#2973#3021#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,14 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trees/AVLtrees/java code for AVL">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/trees/AVLtrees/java code for AVL" />
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -829,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SLists/SListTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding>
-            <element signature="e#474#525#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SLists/SListTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -857,25 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SLists/SList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlWithHeightAttr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlWithHeightAttr.js" />
     <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlJava">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="1560">
           <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
@@ -889,39 +855,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trees/bstTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorts/SListSorts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trees/bst.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="106" column="49" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1112#1160#0" expanded="false" />
-            <element signature="e#2973#3021#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="1785">
           <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
           <folding />
         </state>
@@ -929,10 +872,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trees/AVLtrees/avlAdv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="183" column="62" selection-start-line="183" selection-start-column="62" selection-end-line="183" selection-end-column="62" />
+        <state relative-caret-position="2865">
+          <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc;n#Node#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trees/bstTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SLists/SList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SLists/SListTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding>
+            <element signature="e#474#525#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorts/SListSorts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="209" column="22" selection-start-line="209" selection-start-column="22" selection-end-line="209" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>

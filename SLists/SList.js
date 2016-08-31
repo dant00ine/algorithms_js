@@ -16,13 +16,18 @@ function SList(){
 }
 
 SList.prototype.show = function show(){
-    let current = this.head;
-
+    if(!this.head){
+      return null;
+    }
+    var current = this.head.next;
+    var listString = "Head => " + this.head.data;
     while(current){
-        console.log(current.data);
+        listString += ", "+current.data;
         current = current.next;
     }
+    console.log(listString);
 };
+
 
 SList.prototype.length = function length(){
     let current = this.head;
@@ -50,13 +55,15 @@ SList.prototype.addFirst = function addFirst(data){
 SList.prototype.add = function add(data){
     let n = new NODE(data);
     if(this.head == null){
+        // this.length++
         return this.head = n;
     }
     let current = this.head;
     while(current.next !== null){
         current = current.next;
     }
-    current.next = n;
+    return current.next = n;
+    // this.length++;
 };
 
 SList.prototype.popBack = function popBack(){
@@ -78,6 +85,23 @@ SList.prototype.popBack = function popBack(){
     returnVal = runner.next.data;
     runner.next = null;
     return returnVal;
+};
+
+SList.prototype.removeFront = function(){
+  var temp = this.head;
+    if(!temp.next){
+      this.head = null;
+      return temp.data;
+    }
+    this.head = temp.next;
+    return temp.data;
+};
+
+SList.prototype.front = function(){
+  if(this.head == null){
+    return null
+  }
+  return this.head.data;
 };
 
 SList.prototype.contains = function contains(data){

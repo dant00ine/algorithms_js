@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Tests</title>
+</head>
+<body>
+<script src="./stringsArrays.js"></script>
+<script>
+  var emptyString = "";
+
+  var spaces = "Pl    ay   th a t fun    ky   m u sic"
+  var noSpaces = removeBlanks(spaces);
+  console.log(noSpaces);
+
+  var numString = "0dhjk123u3b32543bjhjkv53";
+  var oneNumString = "1"
+  var digits = getDigits(numString);
+  var oneDigit = getDigits(oneNumString);
+  var emptyDigits = getDigits(emptyString);
+  console.log(digits);
+  console.log(oneDigit);
+  console.log(emptyDigits);
+
+  var acString = "there's no free lunch - gotta pay yer way. ";
+  var snlString = "Live from New York, it's Saturday Night!";
+
+  console.log(acronyms(acString));
+  console.log(acronyms(snlString));
+
+  console.log(countNonSpaces(acString));
+
+  // Let's break this shit!!
+
+  
+
+</script>
+</body>
+</html>
