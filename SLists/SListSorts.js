@@ -2,17 +2,9 @@
  * Created by danimagus on 8/11/16.
  */
 'use strict';
-// const SListFile = require('../SLists/SList.js');
-// var SList = SListFile.SList;
-// var NODE = SListFile.NODE;
-//
-// module.exports = {
-//     NODE: NODE,
-//     SList: SList
-// };
 
 SList.prototype.bubbleSort = function bubbleSort(){
-    var outerRunner = this.zhead;
+    var outerRunner = this.head;
     var innerRunner = this.head;
 
     if(this.head == null){
@@ -106,85 +98,31 @@ SList.prototype.getMiddle = function getMiddle(head){
 
 SList.prototype.selectionSort = function selectionSort(){
 
-    //iterate through list and find smallest element
-    var smallest = this.head;
-    var smallestPrev = null;
+  var outer = this.head;
+  var inner = this.head;
+  var innerPrev = null;
 
-    var outCurrent = this.head;
-    var outPrev = null;
+  while(outer){
+    inner = outer;
+    var min = outer;
+    while(inner){
+      // iterate through to find minimum value
+      if(inner.data < min.data){
+        min = inner;
+      }
+      innerPrev = inner;
+      inner = inner.next;
+    }
+    // switch data values, bringing minimum to the current selection
+    let temp = outer.data;
+    outer.data = min.data;
+    min.data = temp;
 
-    var inCurrent = this.head;
-    var inPrev = null;
+    outer = outer.next;
+  }
 
-
-    while(outCurrent){
-        while(inCurrent) {
-            // inner loop cycles through list comparing
-            // remaining nodes with outCurrent iteration
-            if (inCurrent.data < smallest.data) {
-                // declare new smallest node
-                smallest = inCurrent;
-                smallestPrev = inPrev;
-            }
-            // ++++ iterate INNER loop ++++
-            inPrev = inCurrent;
-            inCurrent = inCurrent.next;
-        } // end inner loop
-        // swap smallest node with outCurrent
-        // pointers to and from nodes must be updated
-        if(outPrev){
-            //
-            smallest.next = outPrev.next;
-            outPrev.next = smallest;
-
-        } else {
-            // situate the smallest as the new head
-            smallest.next = this.head;
-            this.head = smallest;
-        }
-        // inPrev.next = temp;
-        outCurrent.next = smallestPrev.next.next;
-        smallestPrev.next = outCurrent;
-
-        // +++++ iterate OUTER loop +++++
-        console.log("end of outer loop");
-        console.log("smallest:" + smallest.data);
-        console.log("outCurrent:" + outCurrent.data);
-        outPrev = smallest;
-        outCurrent = smallest.next;
-        console.log("outCurrent = smallest.next " + outCurrent.data);
-        console.log("smallest.next.data: " + smallest.next.data);
-    } // end outer loop
-
+ return this;
 };
-
-// SList.prototype.pairSwap = function(){
-//     // implement using the previous pointer
-//     var current = this.head;
-//     var previous = this.head;
-//     var temp;
-//
-//     while(current){
-//
-//         if(current.data == this.head.data){
-//             this.head = current.next;
-//         }
-//
-//         if(current.next){
-//             temp = current.next.next;
-//             current.next.next = current;
-//         } else {
-//             temp = null;
-//         }
-//         previous = current;
-//         // iterate to next pair
-//         current = temp;
-//       }
-//     // }
-//     console.log("this" + this);
-//     this.show();
-//     return this;
-// };
 
 SList.prototype.pairSwap = function(){
     if(this.head == null || this.head.next == null){
@@ -212,25 +150,3 @@ SList.prototype.pairSwap = function(){
       current = previous.next;
     }
 };
-
-// let list1 = new SList();
-// let list2 = new SList();
-// let list3 = new SList();
-//
-// list3.add(1);
-//
-// list2.add(5);
-// list2.add(2);
-//
-// list1.add(6);
-// list1.add(7);
-// list1.add(1);
-// list1.add(2);
-// list1.addFirst(3);
-// // list1.bubbleSort();
-// // list1.reverse();
-// console.log("list head: "+list1.head.data);
-// list1.show();
-//
-// list1.pairSwap();
-// list1.show();
