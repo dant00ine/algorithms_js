@@ -256,7 +256,26 @@ BST.prototype.preOrder = function preOrder(NODE){
 // function toString(){
 //
 // }
-module.exports = {
-    BST: BST,
-    NODE: NODE
-};
+// module.exports = {
+//     BST: BST,
+//     NODE: NODE
+// };
+BST.prototype.removeNode = function removeNode(node, data){
+  if(node == null){
+    return null
+  }
+  if(data == node.data){
+    if(node.right == null && node.left == null){
+      return null
+    }
+    if(node.left == null){
+      return node.right
+    }
+    if(node.right == null){
+      return node.left
+    }
+    // find (ordinal next) smallest value in right subtree
+    //
+  }
+
+}
