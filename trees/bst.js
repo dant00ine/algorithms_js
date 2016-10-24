@@ -3,14 +3,14 @@
 
 "use strict";
 
-// NODE OBJECT CONSTRUCTOR // NODE FUNCTIONALITY
+// NODE OBJECT CONSTRUCTOR
 
 function NODE(data){
     this.data = data;
     this.left = null;
     this.right = null;
     // this.show = show;
-    this.count = 1;
+    // this.count = 1;
 }
 
 NODE.prototype.findMinValue = function findMinValue(){
@@ -51,35 +51,6 @@ BST.prototype.add = function add(data){
         }
     }
 };
-
-// BST.prototype.insert = function insert(data){
-//     var n = new NODE(data);
-//     // edge case
-//     if(this.root == null){
-//         this.root = n;
-//     }
-//     else {
-//         var current = this.root;
-//         var parent;
-//         while(true){
-//             parent = current;
-//             if(data < current.data) {
-//                 current = current.left;
-//                 if(current == null){
-//                     parent.left = n;
-//                     break;
-//                 }
-//             }
-//             else {
-//                 current = current.right;
-//                 if(current == null){
-//                     parent.right = n;
-//                     break;
-//                 }
-//             }
-//         }
-//     }
-// };
 
 BST.prototype.remove = function remove(data){
     this.root = this.removeNode(this.root, data);
@@ -141,22 +112,11 @@ BST.prototype.removeNode = function removeNode(node, data){
 
 // FOR TREE OCCURRENCE
 
-// BST.prototype.update = function update(data){
-//     let grade = this.find(data);
-//     grade.count++;
-//     return grade;
-// };
-
-
-
-
 // BST:: // CONTAINS // FIND // SIZE // GET MIN/MAX // LIST
 
 BST.prototype.contains = function contains(data){
     let current = this.root;
-    console.log("data: " + data);
-    // console.log("current: " + this.root.data)
-    // console.log("successfully entered function context");
+
     while(current){
         switch(data < current.data){
             case true:
@@ -164,15 +124,13 @@ BST.prototype.contains = function contains(data){
                 break;
             case false:
                 if(data == current.data){
-                    return console.log("BST contains value");
+                    return true
                 }
                 current = current.right;
                 break;
         }
     }
-
-    return console.log("BST does not contain value");
-
+    return false
 };
 
 BST.prototype.find = function find(data){
@@ -202,7 +160,6 @@ BST.prototype.size = function size(){
     traverse(this.root);
     return count;
 };
-
 
 BST.prototype.getMax = function getMax(){
     let current = this.root;
@@ -243,39 +200,3 @@ BST.prototype.preOrder = function preOrder(NODE){
         preOrder(NODE.right);
     }
 };
-
-//
-// function size(){
-//
-// }
-//
-// function toArray(){
-//
-// }
-//
-// function toString(){
-//
-// }
-// module.exports = {
-//     BST: BST,
-//     NODE: NODE
-// };
-BST.prototype.removeNode = function removeNode(node, data){
-  if(node == null){
-    return null
-  }
-  if(data == node.data){
-    if(node.right == null && node.left == null){
-      return null
-    }
-    if(node.left == null){
-      return node.right
-    }
-    if(node.right == null){
-      return node.left
-    }
-    // find (ordinal next) smallest value in right subtree
-    //
-  }
-
-}
