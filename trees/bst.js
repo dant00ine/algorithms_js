@@ -37,13 +37,13 @@ BST.prototype.add = function add(data){
     let current = this.root;
 
     while(current){
-        if(data <= current.data){
+        if(data < current.data){
             if(current.left == null){
                 return current.left = n;
             }
             current = current.left;
         }
-        else if(data > current.data){
+        else if(data >= current.data){
             if(current.right == null){
                 return current.right = n;
             }
@@ -89,6 +89,44 @@ BST.prototype.removeNode = function removeNode(node, data){
         return node;
     }
 };
+
+
+
+// BST.prototype.removeWithLoop = function(key){
+//   if(!root){
+//     return false
+//   }
+//   var parent = this.root
+//   var runner = this.root
+//   while(runner){
+//     if(key == runner.data){
+//       if(!runner.left && !runner.right){
+//         //no child case
+//         parent.next = null
+//       }
+//       else if(!runner.left){
+//         // one child case
+//       } else {
+//         // two child case
+//         var minNode = runner.right.findMinValue()
+//
+//         runner.data = minNode.data
+//
+//       }
+//
+//
+//
+//     }
+//
+//     if(key < runner.data){
+//       parent = runner
+//       runner = runner.left
+//     } else {
+//       parent = runner
+//       runner = runner.right
+//     }
+//   }
+// }
 
 // terser remove function below (doesn't quite work)
 
@@ -155,7 +193,8 @@ BST.prototype.size = function size(){
             traverse(node.right);
             traverse(node.left);
         }
-        count = count+1;
+        if(node != null)
+          count = count+1;
     }
     traverse(this.root);
     return count;

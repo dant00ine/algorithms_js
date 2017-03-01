@@ -33,11 +33,15 @@ BST.prototype.displayHeight = function displayHeight(node){
     }
 };
 
-BST.prototype.height = function height(node){
-  if(node == null){
-    return 0;
-  }
-  return 1 + (this.height(node.left) > this.height(node.right) ? this.height(node.left) : this.height(node.right))
+// BST.prototype.height = function height(node){
+//   if(node == null){
+//     return 0;
+//   }
+//   return 1 + (this.height(node.left) > this.height(node.right) ? this.height(node.left) : this.height(node.right))
+// }
+
+BST.prototype.depthFirst = function(key){
+  var runner = this.root
 }
 
 BST.prototype.isFull = function isFull(node){

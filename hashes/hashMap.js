@@ -6,6 +6,8 @@ function HashMap(capacity){
     this.table[i] = new SList();
   }
 }
+var hello = "hello"
+console.log(hello.charCodeAt(0))
 
 String.prototype.hashCode = function(){
   var hash = 0;
@@ -14,6 +16,7 @@ String.prototype.hashCode = function(){
     char = this.charCodeAt(i);
     hash = ((hash<<5)-hash)+char;
     hash &= hash;
+    console.log(hash);
   }
   return hash
 }

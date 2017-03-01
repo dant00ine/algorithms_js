@@ -72,13 +72,6 @@ function insertionSort(arr){
 function merge(left, right){
     var result = [];
 
-    // console.log('******* MERGE CALL *******');
-    //
-    // console.log("left.length: "+left.length);
-    // console.log("left: "+left);
-    // console.log("right.length: "+right.length);
-    // console.log("right: "+right);
-
     while(left.length && right.length){
         if(left[0] <= right[0]){
             result.push(left.shift());
